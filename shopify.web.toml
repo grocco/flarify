@@ -1,0 +1,7 @@
+name = "cf-rrv7-shopify"
+roles = ["frontend", "backend"]
+webhooks_path = "/webhooks"
+
+[commands]
+build = "pnpm react-router build"
+dev = "pnpm react-router dev"

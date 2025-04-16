@@ -1,0 +1,43 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0364df9d4285be1c82a37b058c1d86d9"
+application_url = "https://dev.overduely.com/"
+embedded = true
+name = "Overduely (DEV)"
+handle = "overduely-dev"
+
+[build]
+automatically_update_urls_on_dev = false
+dev_store_url = "swiss-invoice-test.myshopify.com"
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [
+  "app_subscriptions/approaching_capped_amount",
+  "app_subscriptions/update",
+  "app/uninstalled",
+  "orders/create",
+  "orders/paid"
+]
+  uri = "/webhooks"
+  compliance_topics = [ "customers/data_request", "customers/redact", "shop/redact" ]
+
+[access.admin]
+embedded_app_direct_api_access = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers ,read_orders,write_merchant_managed_fulfillment_orders,write_order_edits,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://dev.overduely.com/auth/callback",
+  "https://dev.overduely.com/auth/shopify/callback",
+  "https://dev.overduely.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
