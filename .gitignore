@@ -1,6 +1,7 @@
 .DS_Store
 /node_modules/
 *.tsbuildinfo
+.env*
 
 # React Router
 /.react-router/
@@ -10,5 +11,7 @@
 .mf
 .wrangler
 .dev.vars*
+worker-configuration.d.ts
 
+# Shopify
 .shopify

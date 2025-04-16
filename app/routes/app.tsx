@@ -31,14 +31,14 @@ export default function App() {
       <script
         dangerouslySetInnerHTML={{
           __html: /* javascript */ `
-						function processWebVitals(metrics) {
-							const monitorUrl = "${appUrl}/shopify/web-vitals";
-							const data = JSON.stringify(metrics);
-							navigator.sendBeacon(monitorUrl, data);
-						}
+function processWebVitals(metrics) {
+  const monitorUrl = "${appUrl}/shopify/web-vitals";
+  const data = JSON.stringify(metrics);
+  navigator.sendBeacon(monitorUrl, data);
+}
 
-						// Register the callback
-						shopify.webVitals.onReport(processWebVitals);
+// Register the callback
+shopify.webVitals.onReport(processWebVitals);
 					`,
         }}
         type="text/javascript"

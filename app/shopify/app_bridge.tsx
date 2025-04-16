@@ -1,3 +1,5 @@
+// Source: https://github.com/chr33s/shopflare/blob/main/app/components/app-bridge.tsx
+
 import type {
   ShopifyGlobal,
   UIModalAttributes,
